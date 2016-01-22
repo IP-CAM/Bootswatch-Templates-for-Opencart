@@ -1,0 +1,11 @@
+extract zip file to: catalog\view\theme\ folder
+
+it showld look like
+
+catalog\view\theme\bootswatch_THEME
+catalog\view\theme\bootswatch_THEME\images
+catalog\view\theme\bootswatch_THEME\stylesheet
+catalog\view\theme\bootswatch_THEME\template
+
+in admin activate your new theme.
+
