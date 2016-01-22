@@ -1,2 +1,2 @@
 # theme
-bootstrap bootswatch templates for opencart
+bootstrap bootswatch templates for opencart Ecommerce
