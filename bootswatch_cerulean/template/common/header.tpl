@@ -10,7 +10,6 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php echo $title; ?></title>
 <base href="<?php echo $base; ?>" />
 <?php if ($description) { ?>
 <meta name="description" content="<?php echo $description; ?>" />
@@ -18,33 +17,30 @@
 <?php if ($keywords) { ?>
 <meta name="keywords" content= "<?php echo $keywords; ?>" />
 <?php } ?>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<?php if ($icon) { ?>
-<link href="<?php echo $icon; ?>" rel="icon" />
-<?php } ?>
-<?php foreach ($links as $link) { ?>
-<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
-<?php } ?>
+
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-
-<link href="catalog/view/theme/bootswatch_cerulean/stylesheet/stylesheet.css" rel="stylesheet">
-<link href="catalog/view/theme/bootswatch_cerulean/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-
+ <link href="catalog/view/theme/bootswatch_cerulean/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+ <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+ <link href="catalog/view/theme/bootswatch_cerulean/stylesheet/animate.css" rel="stylesheet">
+ <link href="catalog/view/theme/bootswatch_cerulean/stylesheet/flexslider.css" rel="stylesheet" type="text/css"/>
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
-
-<link href="catalog/view/stylesheet/stylesheet.css" rel="stylesheet">
-<link href="catalog/view/theme/bootswatch_cerulean/stylesheet/stylesheet.css" rel="stylesheet">
+ <link href="catalog/view/theme/bootswatch_cerulean/stylesheet/stylesheet.css" rel="stylesheet">
+<script src="catalog/view/javascript/flexslider.js" type="text/javascript"></script>
 
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+<?php foreach ($links as $link) { ?>
+<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
+<?php } ?>
 <?php foreach ($scripts as $script) { ?>
 <script src="<?php echo $script; ?>" type="text/javascript"></script>
 <?php } ?>
-<?php echo $google_analytics; ?>
+<?php foreach ($analytics as $analytic) { ?>
+<?php echo $analytic; ?>
+<?php } ?>
 </head>
 <body class="<?php echo $class; ?>">
     
@@ -80,11 +76,13 @@
 </div>
 <header>
   <div class="container">
-    <div class="row" style="margin-bottom: 18px;">
+    <div class="row" style="margin-bottom: 18px;">  <div class="container">
       <div class="col-sm-5">
         <div id="logo">
           <?php if ($logo) { ?>
-          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
+            <a href="<?php echo $home; ?>">
+              <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" />
+          </a>
           <?php } else { ?>
           <h1><a href="<?php echo $home; ?>"><i class="fa fa-cogs"></i> <?php echo $name; ?></a></h1>
           <?php } ?>
@@ -97,11 +95,12 @@
   </div>
 </header>
 <?php if ($categories) { ?>
-<div class="container">
+
 
 
  <!--navbar-default  -->
 <div class="navbar navbar-default ">
+    <div class="container">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
       <span class="icon-bar"></span>

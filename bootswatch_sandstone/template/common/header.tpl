@@ -29,11 +29,12 @@
 <?php } ?>
 
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-<link href="catalog/view/theme/bootswatch_lumen/stylesheet/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="catalog/view/theme/bootswatch_sandstone/stylesheet/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/bootswatch_lumen/stylesheet/stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="catalog/view/theme/bootswatch_sandstone/stylesheet/stylesheet.css" rel="stylesheet" type="text/css"/>
 
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
@@ -96,7 +97,7 @@
 <div class="container">
  <!--navbar-default  -->
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
       <span class="icon-bar"></span>
